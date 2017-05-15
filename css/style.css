@@ -1,0 +1,244 @@
+body {	
+	font-size: 1.9em;
+}
+h1, h2, h3, h4 {
+	font-family: "fira-sans";
+}
+h1 {
+	font-size: 4.4em;
+	font-weight: 900;
+}
+h2 {
+	font-weight: 400;
+}
+p, li {
+	font-size: 1.1em;
+}
+a {
+	color: #3e9ebb;
+	text-decoration: none;
+}
+.container {
+	max-width: 860px;
+}
+
+/* NAVBAR */
+
+.navbar .nav {
+	border-bottom: 5px solid #fff;
+	margin-bottom: 0;
+}
+.nav li {
+	display: inline-block;
+	margin: 0;
+}
+
+.nav li > a {
+	display: inline-block;
+	padding: 15px;
+	text-decoration: none;
+	color: #fff;
+}
+
+/* SECTIONS */
+
+main > header {
+	padding: 50px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+main > header a {
+	color: #6c7273;
+	opacity: 0.9;
+}
+
+main > header a:hover {
+	color: #6c7273;
+	opacity: 1;
+}
+
+main > header .fa {
+	font-size: 2.6em;
+}
+
+.main-heading {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 0;
+    font-size: 2.7em;
+}
+
+header.homepage-header {
+	background: #702d00;
+	background: url(/images/castle-background.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 0px -50px;
+	color: #fff;
+}
+main {
+	background: url(/images/interknights-sword.png) no-repeat;
+	background-position: right -300px top 100px;
+	background-size: 600px;
+}
+main > section	{
+	padding: 70px 0;
+	/*border-top: 1px solid #e6e6e6*/
+}
+main > section.border-top {
+	border-top: 1px solid #dfdfdf;
+}
+main > section h2 {
+	padding-bottom: 10px;
+	text-align: center;
+	color: #6c7273;
+}
+main > section > .container {
+	/*padding-right: 100px;*/
+}
+
+/* HERO */
+
+.hero {
+	padding: 90px 0 0px 0;
+	background: linear-gradient(to bottom right,
+		rgba(140,40,10, 0.75),
+		rgba(178, 112, 92, 0.51) );
+}
+.hero h1 {
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+.hero button {
+	color: #fff;
+	border-color: #fff;
+}
+.hero button:hover {
+	color: rgba(255,255,255,0.8);
+	border-color: rgba(255,255,255,0.8);
+}
+p.tagline {
+	font-size: 1.4em;
+	color: rgba(255,255,255,0.9);
+	font-weight: 900;
+}
+.cta {
+	background: rgba(150, 50, 20, 0.78);
+	border: 1px solid rgba(255,255,255,0.5);
+	border-bottom: 0;
+	border-radius: 5px 5px 0 0;
+	padding: 60px 50px 50px 50px;
+	margin: 40px -50px 0 -50px;
+}
+.cta h2 {
+	font-size: 1.8em;
+	padding: 0;
+}
+
+/* HOMEPAGE */
+
+.contact-list {
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+.contact-list li {
+	display: inline-block;
+}
+.contact-list a {
+}
+
+/* MODAL */
+
+.modal-outer {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(255,255,255,1);
+	padding: 20px;
+	opacity: 0;
+	transition: opacity 0.2s;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.modal-outer.active {
+	opacity: 1;
+	z-index: 1;
+}
+.modal-box {
+	height: 0;
+	border: 2px solid rgba(0,0,0,0.2);
+	width: 800px;
+	margin: 0 auto;
+	transition: height 0.8s;
+	overflow: hidden;
+}
+.modal-content {
+	box-sizing: border-box;
+	padding: 40px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.8s;
+	transition-delay: 0.4s;
+	color: #6c7273;
+}
+.modal-box.active {
+	height: 400px;
+}
+.modal-box.active .modal-content {
+	opacity: 1;
+}
+.exit-modal {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	display: inline-block;
+	padding: 10px;
+	font-size: 2em;
+	font-weight: 100;
+	height: auto;
+	border: 0;
+	color: rgba(0,0,0,0.6)
+}
+.modal-content .contact-list li {
+	display: block;
+}
+
+@media (max-width: 840px) {
+	.modal-box {
+		width: 100%;
+	}
+}
+
+@media (max-width: 650px) {
+	h1 {
+		font-size: 2.6em;
+	}
+	.hero {
+		background: rgba(142, 66, 18, 0.65)
+	}
+	.main-heading {
+		font-size: 1.9em;
+	}
+	main > header .fa {
+		font-size: 1.9em;
+	}
+	main > section h2, .contact-list {
+		text-align: left;
+	}
+	.cta {
+		margin: 40px -20px 0 -20px;
+		border: 0;
+		border-radius: 0;
+		padding: 60px 20px 50px 20px;
+	}
+}
